@@ -1,589 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiny Tubs Official - Home-Made Cheesecakes</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        /* Apply Inter font family */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fef3f4; /* Very soft pink/cream background for cute/home feel */
-        }
-        /* Custom scrollbar styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #fef3f4;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #fbcfe8; /* Light Pink */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #f472b6; /* Medium Pink */
-        }
-        .text-shadow-light {
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-        }
-        .text-shadow-dark {
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-        .card-hover-effect:hover {
-            transform: scale(1.03) rotate(-1deg);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Tubs Official - Home-Made Cheesecakes</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fef3f4; /* Very soft pink/cream background for cute/home feel */
+        }
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fef3f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fbcfe8; /* Light Pink */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f472b6; /* Medium Pink */
+        }
+        .text-shadow-light {
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        .text-shadow-dark {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        .card-hover-effect:hover {
+            transform: scale(1.03) rotate(-1deg);
+        }
+    </style>
 </head>
 <body class="antialiased text-gray-800">
 
-    <!-- Header & Navigation -->
-    <header class="bg-white shadow-xl sticky top-0 z-10">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold text-pink-600">
-                <a href="#hero">🍪 Tiny Tubs Official</a>
-            </h1>
-            <div class="hidden md:flex space-x-8">
-                <a href="#story" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Our Story</a>
-                <a href="#flavors" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Flavor Map</a>
-                <a href="#menu" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">The Tubs</a>
-                <a href="#orders" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Check Orders</a>
-                <a href="#contact" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Order Now</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-3 space-y-1">
-            <a href="#story" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">Our Story</a>
-            <a href="#flavors" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">Flavor Map</a>
-            <a href="#menu" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">The Tubs</a>
-            <a href="#orders" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">Check Orders</a>
-            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">Order Now</a>
-        </div>
-    </header>
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-xl sticky top-0 z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-pink-600">
+                <a href="#hero">🍪 Tiny Tubs Official</a>
+            </h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#story" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Our Story</a>
+                <a href="#flavors" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Flavor Map</a>
+                <a href="#menu" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">The Tubs</a>
+                <a href="#orders" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Check Orders</a>
+                <a href="#contact" class="text-gray-600 hover:text-pink-600 font-medium transition duration-300">Order Now</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:text-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-3 space-y-1">
+            <a href="#story" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">Our Story</a>
+            <a href="#flavors" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">Flavor Map</a>
+            <a href="#menu" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">The Tubs</a>
+            <a href="#orders" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">Check Orders</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition duration-300">Order Now</a>
+        </div>
+    </header>
 
-    <main class="max-w-7xl mx-auto">
-        
-        <!-- 1. Hero Section - The Creamy Introduction (Content remains the same) -->
-        <section id="hero" class="py-24 px-4 sm:px-6 lg:px-8 bg-white rounded-b-3xl shadow-2xl mb-12 border-b-8 border-yellow-400">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-                <div class="lg:col-span-2">
-                    <p class="text-xl text-fuchsia-600 font-bold mb-2 uppercase tracking-widest">Hand-Crafted With Love, Based in Singapore</p>
-                    <h2 class="text-6xl sm:text-7xl font-extrabold text-gray-900 leading-tight">
-                        Dessert Comfort, <br class="hidden sm:inline">Tiny Tub Style.
-                    </h2>
-                    <p class="mt-6 text-2xl text-gray-600">
-                        Welcome home! Our baked cheesecakes are rich, velvety, and served in adorable, individual portions. Your perfect treat is waiting.
-                    </p>
-                    <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#menu" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl shadow-xl text-white bg-pink-600 hover:bg-pink-700 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
-                            Browse Our Sweet Menu 🍰
-                        </a>
-                        <a href="#delivery" class="inline-flex items-center justify-center px-8 py-4 border border-pink-600 text-lg font-bold rounded-xl text-pink-600 bg-white hover:bg-pink-50 transition duration-300 transform hover:scale-105">
-                            Singapore Delivery Info
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:col-span-1 flex justify-center lg:justify-end">
-                    <img class="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-[50px] border-8 border-pink-200 shadow-2xl rotate-3 transition duration-500 hover:rotate-0" 
-                         src="https://placehold.co/320x320/ffc1d3/c026d3?text=Cheesecake+Tub+with+Strawberry+Topping" 
-                         alt="Tiny Tubs Signature Cheesecake"
-                         onerror="this.onerror=null; this.src='https://placehold.co/320x320/f9a8d4/ffffff?text=Tiny+Tubs';">
-                </div>
-            </div>
-        </section>
+    <main class="max-w-7xl mx-auto">
+        
+        <!-- 1. Hero Section - The Creamy Introduction (Content remains the same) -->
+        <section id="hero" class="py-24 px-4 sm:px-6 lg:px-8 bg-white rounded-b-3xl shadow-2xl mb-12 border-b-8 border-yellow-400">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                <div class="lg:col-span-2">
+                    <p class="text-xl text-fuchsia-600 font-bold mb-2 uppercase tracking-widest">Hand-Crafted With Love, Based in Singapore</p>
+                    <h2 class="text-6xl sm:text-7xl font-extrabold text-gray-900 leading-tight">
+                        Dessert Comfort, <br class="hidden sm:inline">Tiny Tub Style.
+                    </h2>
+                    <p class="mt-6 text-2xl text-gray-600">
+                        Welcome home! Our baked cheesecakes are rich, velvety, and served in adorable, individual portions. Your perfect treat is waiting.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#menu" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl shadow-xl text-white bg-pink-600 hover:bg-pink-700 transition duration-300 transform hover:scale-105 hover:shadow-2xl">
+                            Browse Our Sweet Menu 🍰
+                        </a>
+                        <a href="#delivery" class="inline-flex items-center justify-center px-8 py-4 border border-pink-600 text-lg font-bold rounded-xl text-pink-600 bg-white hover:bg-pink-50 transition duration-300 transform hover:scale-105">
+                            Singapore Delivery Info
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-1 flex justify-center lg:justify-end">
+                    <img class="w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-[50px] border-8 border-pink-200 shadow-2xl rotate-3 transition duration-500 hover:rotate-0" 
+                         src="https://placehold.co/320x320/ffc1d3/c026d3?text=Cheesecake+Tub+with+Strawberry+Topping" 
+                         alt="Tiny Tubs Signature Cheesecake"
+                         onerror="this.onerror=null; this.src='https://placehold.co/320x320/f9a8d4/ffffff?text=Tiny+Tubs';">
+                </div>
+            </div>
+        </section>
 
-        <!-- 2. Our Story Section (Content remains the same) -->
-        <section id="story" class="py-16 px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Baked Fresh, Just Like Mom Used To</h2>
-            <div class="bg-white p-10 rounded-2xl shadow-xl border-t-8 border-rose-300/50">
-                <p class="text-xl text-gray-700 leading-relaxed mb-6 italic">
-                    "Every Tiny Tub carries the warmth of a Sunday kitchen. We start with the best ingredients, mix them with a whole lot of care, and bake them until they're perfectly golden and impossibly smooth. It's not just dessert; it's a cozy hug in a jar."
-                </p>
-                <p class="text-lg text-gray-600 leading-relaxed text-right font-semibold">
-                    — The Tiny Tubs 
-                </p>
-            </div>
-        </section>
+        <!-- 2. Our Story Section (Content remains the same) -->
+        <section id="story" class="py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Baked Fresh, Just Like Mom Used To</h2>
+            <div class="bg-white p-10 rounded-2xl shadow-xl border-t-8 border-rose-300/50">
+                <p class="text-xl text-gray-700 leading-relaxed mb-6 italic">
+                    "Every Tiny Tub carries the warmth of a Sunday kitchen. We start with the best ingredients, mix them with a whole lot of care, and bake them until they're perfectly golden and impossibly smooth. It's not just dessert; it's a cozy hug in a jar."
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed text-right font-semibold">
+                    — The Tiny Tubs 
+                </p>
+            </div>
+        </section>
 
-        <!-- 3. Flavor Map Section (Content remains the same) -->
-        <section id="flavors" class="py-16 px-4 sm:px-6 lg:px-8 bg-pink-50/70">
-            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Our Four Cozy Cornerstones</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-                
-                <!-- Flavor Card 1: Strawberry Swirl -->
-                <div class="relative rounded-2xl shadow-xl overflow-hidden h-72 card-hover-effect border-b-4 border-red-400">
-                    <img src="https://placehold.co/600x400/fecaca/991b1b?text=Strawberry+Swirl" 
-                         alt="Strawberry Swirl Cheesecake" 
-                         class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/fecaca/991b1b?text=Strawberry+Swirl';">
-                    <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
-                    <div class="relative z-10 p-6 flex flex-col justify-between h-full text-white">
-                        <div class="flex-grow">
-                            <div class="text-5xl mb-4 text-red-300 text-shadow-dark">🍓</div>
-                            <h3 class="text-xl font-bold mb-2 text-red-100 text-shadow-dark">Strawberry Swirl</h3>
-                            <p class="text-white text-sm font-medium text-shadow-dark">Velvety classic cream cheese swirled with house-made, bright strawberry preserves.</p>
-                        </div>
-                        <span class="mt-4 self-start bg-red-600/90 text-white text-xs font-medium px-2 py-0.5 rounded-full shadow-lg">Fruity & Fresh</span>
-                    </div>
-                </div>
+        <!-- 3. Flavor Map Section (Content remains the same) -->
+        <section id="flavors" class="py-16 px-4 sm:px-6 lg:px-8 bg-pink-50/70">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Our Four Cozy Cornerstones</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+                
+                <!-- Flavor Card 1: Strawberry Swirl -->
+                <div class="relative rounded-2xl shadow-xl overflow-hidden h-72 card-hover-effect border-b-4 border-red-400">
+                    <img src="https://placehold.co/600x400/fecaca/991b1b?text=Strawberry+Swirl" 
+                         alt="Strawberry Swirl Cheesecake" 
+                         class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/fecaca/991b1b?text=Strawberry+Swirl';">
+                    <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+                    <div class="relative z-10 p-6 flex flex-col justify-between h-full text-white">
+                        <div class="flex-grow">
+                            <div class="text-5xl mb-4 text-red-300 text-shadow-dark">🍓</div>
+                            <h3 class="text-xl font-bold mb-2 text-red-100 text-shadow-dark">Strawberry Swirl</h3>
+                            <p class="text-white text-sm font-medium text-shadow-dark">Velvety classic cream cheese swirled with house-made, bright strawberry preserves.</p>
+                        </div>
+                        <span class="mt-4 self-start bg-red-600/90 text-white text-xs font-medium px-2 py-0.5 rounded-full shadow-lg">Fruity & Fresh</span>
+                    </div>
+                </div>
 
-                <!-- Flavor Card 2: Blueberry Bloom -->
-                <div class="relative rounded-2xl shadow-xl overflow-hidden h-72 card-hover-effect border-b-4 border-indigo-400">
-                    <img src="https://placehold.co/600x400/c7d2fe/3730a3?text=Blueberry+Bloom" 
-                         alt="Blueberry Bloom Cheesecake" 
-                         class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/c7d2fe/3730a3?text=Blueberry+Bloom';">
-                    <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
-                    <div class="relative z-10 p-6 flex flex-col justify-between h-full text-white">
-                        <div class="flex-grow">
-                            <div class="text-5xl mb-4 text-indigo-300 text-shadow-dark">🫐</div>
-                            <h3 class="text-xl font-bold mb-2 text-indigo-100 text-shadow-dark">Blueberry Bloom</h3>
-                            <p class="text-white text-sm font-medium text-shadow-dark">Creamy and rich, topped with a tart blueberry compote. A purple dream.</p>
-                        </div>
-                        <span class="mt-4 self-start bg-indigo-600/90 text-white text-xs font-medium px-2 py-0.5 rounded-full shadow-lg">Garden Goodness</span>
-                    </div>
-                </div>
+                <!-- Flavor Card 2: Blueberry Bloom -->
+                <div class="relative rounded-2xl shadow-xl overflow-hidden h-72 card-hover-effect border-b-4 border-indigo-400">
+                    <img src="https://placehold.co/600x400/c7d2fe/3730a3?text=Blueberry+Bloom" 
+                         alt="Blueberry Bloom Cheesecake" 
+                         class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/c7d2fe/3730a3?text=Blueberry+Bloom';">
+                    <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+                    <div class="relative z-10 p-6 flex flex-col justify-between h-full text-white">
+                        <div class="flex-grow">
+                            <div class="text-5xl mb-4 text-indigo-300 text-shadow-dark">🫐</div>
+                            <h3 class="text-xl font-bold mb-2 text-indigo-100 text-shadow-dark">Blueberry Bloom</h3>
+                            <p class="text-white text-sm font-medium text-shadow-dark">Creamy and rich, topped with a tart blueberry compote. A purple dream.</p>
+                        </div>
+                        <span class="mt-4 self-start bg-indigo-600/90 text-white text-xs font-medium px-2 py-0.5 rounded-full shadow-lg">Garden Goodness</span>
+                    </div>
+                </div>
 
-                <!-- Flavor Card 3: Oreo Crush -->
-                <div class="relative rounded-2xl shadow-xl overflow-hidden h-72 card-hover-effect border-b-4 border-gray-700">
-                    <img src="https://placehold.co/600x400/d1d5db/1f2937?text=Oreo+Crush" 
-                         alt="Oreo Crush Cheesecake" 
-                         class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1d5db/1f2937?text=Oreo+Crush';">
-                    <div class="absolute inset-0 bg-black/50 backdrop-blur-[1px]"></div>
-                    <div class="relative z-10 p-6 flex flex-col justify-between h-full text-white">
-                        <div class="flex-grow">
-                            <div class="text-5xl mb-4 text-gray-300 text-shadow-dark">⚫</div>
-                            <h3 class="text-xl font-bold mb-2 text-gray-100 text-shadow-dark">Oreo Crush</h3>
-                            <p class="text-white text-sm font-medium text-shadow-dark">The ultimate cookie experience! Crushed Oreos folded into the batter and used for the crust.</p>
-                        </div>
-                        <span class="mt-4 self-start bg-gray-700/90 text-white text-xs font-medium px-2 py-0.5 rounded-full shadow-lg">Crunchy & Classic</span>
-                    </div>
-                </div>
+                <!-- Flavor Card 3: Oreo Crush -->
+                <div class="relative rounded-2xl shadow-xl overflow-hidden h-72 card-hover-effect border-b-4 border-gray-700">
+                    <img src="https://placehold.co/600x400/d1d5db/1f2937?text=Oreo+Crush" 
+                         alt="Oreo Crush Cheesecake" 
+                         class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/d1d5db/1f2937?text=Oreo+Crush';">
+                    <div class="absolute inset-0 bg-black/50 backdrop-blur-[1px]"></div>
+                    <div class="relative z-10 p-6 flex flex-col justify-between h-full text-white">
+                        <div class="flex-grow">
+                            <div class="text-5xl mb-4 text-gray-300 text-shadow-dark">⚫</div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-100 text-shadow-dark">Oreo Crush</h3>
+                            <p class="text-white text-sm font-medium text-shadow-dark">The ultimate cookie experience! Crushed Oreos folded into the batter and used for the crust.</p>
+                        </div>
+                        <span class="mt-4 self-start bg-gray-700/90 text-white text-xs font-medium px-2 py-0.5 rounded-full shadow-lg">Crunchy & Classic</span>
+                    </div>
+                </div>
 
-                <!-- Flavor Card 4: Spiced Biscoff -->
-                <div class="relative rounded-2xl shadow-xl overflow-hidden h-72 card-hover-effect border-b-4 border-amber-500">
-                    <img src="https://placehold.co/600x400/fde68a/b45309?text=Spiced+Biscoff" 
-                         alt="Spiced Biscoff Cheesecake" 
-                         class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/fde68a/b45309?text=Spiced+Biscoff';">
-                    <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
-                    <div class="relative z-10 p-6 flex flex-col justify-between h-full text-white">
-                        <div class="flex-grow">
-                            <div class="text-5xl mb-4 text-amber-300 text-shadow-dark">🧇</div>
-                            <h3 class="text-xl font-bold mb-2 text-amber-100 text-shadow-dark">Spiced Biscoff</h3>
-                            <p class="text-white text-sm font-medium text-shadow-dark">Warm spiced cookie butter swirled through, with a crunchy Biscoff cookie base.</p>
-                        </div>
-                        <span class="mt-4 self-start bg-amber-600/90 text-white text-xs font-medium px-2 py-0.5 rounded-full shadow-lg">Spiced Perfection</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <!-- Flavor Card 4: Spiced Biscoff -->
+                <div class="relative rounded-2xl shadow-xl overflow-hidden h-72 card-hover-effect border-b-4 border-amber-500">
+                    <img src="https://placehold.co/600x400/fde68a/b45309?text=Spiced+Biscoff" 
+                         alt="Spiced Biscoff Cheesecake" 
+                         class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/fde68a/b45309?text=Spiced+Biscoff';">
+                    <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+                    <div class="relative z-10 p-6 flex flex-col justify-between h-full text-white">
+                        <div class="flex-grow">
+                            <div class="text-5xl mb-4 text-amber-300 text-shadow-dark">🧇</div>
+                            <h3 class="text-xl font-bold mb-2 text-amber-100 text-shadow-dark">Spiced Biscoff</h3>
+                            <p class="text-white text-sm font-medium text-shadow-dark">Warm spiced cookie butter swirled through, with a crunchy Biscoff cookie base.</p>
+                        </div>
+                        <span class="mt-4 self-start bg-amber-600/90 text-white text-xs font-medium px-2 py-0.5 rounded-full shadow-lg">Spiced Perfection</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- 4. The Tubs Menu Section (Content remains the same) -->
-        <section id="menu" class="py-16 px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Our Featured Dessert Tubs</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 4. The Tubs Menu Section (Content remains the same) -->
+        <section id="menu" class="py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Our Featured Dessert Tubs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Featured Tub Card 1: Biscoff -->
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group border-4 border-amber-300/50 hover:border-amber-400 transition duration-300">
-                    <img class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" 
-                         src="https://placehold.co/600x400/fcd34d/713f12?text=Biscoff+Cookie+on+Cheesecake" 
-                         alt="Biscoff Cheesecake Tub">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Biscoff Dream Tub</h3>
-                        <p class="text-gray-600 mb-4 text-sm">A highly requested warm flavor profile. The best of the Belgian spiced cookie in a tub.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">✨ Signature</span>
-                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">$4.00 / tub</span>
-                        </div>
-                        <a href="#contact" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Order This Sweet Treat &rarr;</a>
-                    </div>
-                </div>
+                <!-- Featured Tub Card 1: Biscoff -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group border-4 border-amber-300/50 hover:border-amber-400 transition duration-300">
+                    <img class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" 
+                         src="https://placehold.co/600x400/fcd34d/713f12?text=Biscoff+Cookie+on+Cheesecake" 
+                         alt="Biscoff Cheesecake Tub">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Biscoff Dream Tub</h3>
+                        <p class="text-gray-600 mb-4 text-sm">A highly requested warm flavor profile. The best of the Belgian spiced cookie in a tub.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-0.5 rounded-full">✨ Signature</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">$4.00 / tub</span>
+                        </div>
+                        <a href="#contact" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Order This Sweet Treat &rarr;</a>
+                    </div>
+                </div>
 
-                <!-- Featured Tub Card 2: Oreo -->
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group border-4 border-gray-300/50 hover:border-gray-400 transition duration-300">
-                    <img class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" 
-                         src="https://placehold.co/600x400/374151/ffffff?text=Oreo+Tubs+with+Crumbles" 
-                         alt="Oreo Cheesecake Tub">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Oreo Cookies & Cream Tub</h3>
-                        <p class="text-gray-600 mb-4 text-sm">A dessert classic made richer. Loaded with chocolate cookies in every velvety bite.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">🍪 Fan Favorite</span>
-                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">$4.00 / tub</span>
-                        </div>
-                        <a href="#contact" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Order This Sweet Treat &rarr;</a>
-                    </div>
-                </div>
+                <!-- Featured Tub Card 2: Oreo -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group border-4 border-gray-300/50 hover:border-gray-400 transition duration-300">
+                    <img class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" 
+                         src="https://placehold.co/600x400/374151/ffffff?text=Oreo+Tubs+with+Crumbles" 
+                         alt="Oreo Cheesecake Tub">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Oreo Cookies & Cream Tub</h3>
+                        <p class="text-gray-600 mb-4 text-sm">A dessert classic made richer. Loaded with chocolate cookies in every velvety bite.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">🍪 Fan Favorite</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">$4.00 / tub</span>
+                        </div>
+                        <a href="#contact" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Order This Sweet Treat &rarr;</a>
+                    </div>
+                </div>
 
-                <!-- Featured Tub Card 3: Strawberry & Blueberry Combo -->
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group border-4 border-red-300/50 hover:border-red-400 transition duration-300">
-                    <img class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" 
-                         src="https://placehold.co/600x400/f87171/ffffff?text=Strawberry+%26+Blueberry+Cheesecake+Duo" 
-                         alt="Strawberry and Blueberry Cheesecake Tubs">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Seasonal Berry Duo</h3>
-                        <p class="text-gray-600 mb-4 text-sm">Get both fresh fruit flavors—Strawberry Swirl and Blueberry Bloom—in one delightful combo pack.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">🍓🫐 Combo Pack</span>
-                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">$4.50 / duo</span>
-                        </div>
-                        <a href="#contact" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Order This Sweet Treat &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- NEW SECTION: Delivery Information Banner (Content remains the same) -->
-        <section id="delivery" class="py-10 px-4 sm:px-6 lg:px-8 bg-yellow-100 rounded-3xl my-12 shadow-inner border-4 border-yellow-300">
-            <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-3xl font-extrabold text-gray-800 mb-3"> SG Delivery & Logistics (Singapore Only)</h3>
-                <p class="text-xl text-gray-600 font-medium mb-4">
-                    Good news! We deliver our fresh Tiny Tubs island-wide across Singapore.
-                </p>
-                <div class="bg-white p-6 rounded-xl shadow-lg inline-block">
-                    <p class="text-2xl font-bold text-pink-700">
-                        Delivery Charge: <span class="text-fuchsia-600">$10 – $15</span> per order.
-                    </p>
-                    <p class="text-sm text-gray-500 mt-2">
-                        Exact fee calculated based on distance upon order confirmation.
-                    </p>
-                </div>
-            </div>
-        </section>
+                <!-- Featured Tub Card 3: Strawberry & Blueberry Combo -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group border-4 border-red-300/50 hover:border-red-400 transition duration-300">
+                    <img class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" 
+                         src="https://placehold.co/600x400/f87171/ffffff?text=Strawberry+%26+Blueberry+Cheesecake+Duo" 
+                         alt="Strawberry and Blueberry Cheesecake Tubs">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Seasonal Berry Duo</h3>
+                        <p class="text-gray-600 mb-4 text-sm">Get both fresh fruit flavors—Strawberry Swirl and Blueberry Bloom—in one delightful combo pack.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">🍓🫐 Combo Pack</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">$4.50 / duo</span>
+                        </div>
+                        <a href="#contact" class="text-pink-600 hover:text-pink-800 font-medium transition duration-300">Order This Sweet Treat &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- NEW SECTION: Delivery Information Banner (Content remains the same) -->
+        <section id="delivery" class="py-10 px-4 sm:px-6 lg:px-8 bg-yellow-100 rounded-3xl my-12 shadow-inner border-4 border-yellow-300">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-3xl font-extrabold text-gray-800 mb-3"> SG Delivery & Logistics (Singapore Only)</h3>
+                <p class="text-xl text-gray-600 font-medium mb-4">
+                    Good news! We deliver our fresh Tiny Tubs island-wide across Singapore.
+                </p>
+                <div class="bg-white p-6 rounded-xl shadow-lg inline-block">
+                    <p class="text-2xl font-bold text-pink-700">
+                        Delivery Charge: <span class="text-fuchsia-600">$10 – $15</span> per order.
+                    </p>
+                    <p class="text-sm text-gray-500 mt-2">
+                        Exact fee calculated based on distance upon order confirmation.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-        <!-- 5. Order Inquiry / Contact Section -->
-        <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-pink-600 rounded-3xl my-12 shadow-2xl">
-            <h2 class="text-4xl font-extrabold text-white text-center mb-4 text-shadow-light">Place Your Order Today!</h2>
-            <p class="text-xl text-pink-200 text-center mb-12">Fill out the form below for custom orders, bulk discounts, or catering needs. (Delivery applies to Singapore addresses only)</p>
+        <!-- 5. Order Inquiry / Contact Section -->
+        <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-pink-600 rounded-3xl my-12 shadow-2xl">
+            <h2 class="text-4xl font-extrabold text-white text-center mb-4 text-shadow-light">Place Your Order Today!</h2>
+            <p class="text-xl text-pink-200 text-center mb-12">Fill out the form below for custom orders, bulk discounts, or catering needs. (Delivery applies to Singapore addresses only)</p>
 
-            <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
-                <form id="contact-form">
-                    <div class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" id="name" name="name" required
-                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 transition duration-150">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email" required
-                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 transition duration-150">
-                        </div>
-                         <div>
-                            <label for="quantity" class="block text-sm font-medium text-gray-700">Total Tubs Needed</label>
-                            <input type="number" id="quantity" name="quantity" required min="1" placeholder="e.g., 6, 12, or 50 for catering"
-                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 transition duration-150">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700">Specific Flavors & Delivery Address (Required for Singapore Delivery)</label>
-                            <textarea id="message" name="message" rows="4" required
-                                      class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 transition duration-150" placeholder="Example: 4 Oreo, 4 Biscoff, 2 Strawberry, 2 Blueberry. Full Singapore delivery address..."></textarea>
-                        </div>
-                        <button type="submit" id="submit-button"
-                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-md text-lg font-bold text-white bg-fuchsia-500 hover:bg-fuchsia-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500 transition duration-300 transform hover:scale-[1.01]">
-                            Send Sweet Inquiry
-                        </button>
-                        <div id="status-message" class="text-center mt-4 text-sm font-medium hidden"></div>
-                    </div>
-                </form>
-            </div>
-        </section>
-        
-        <!-- 6. Order Tracking Section - Where you check orders -->
-        <section id="orders" class="py-16 px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Recent Orders (Your Dashboard)</h2>
-            <div id="order-list" class="space-y-4 max-w-4xl mx-auto">
-                <div id="loading-message" class="text-center text-lg font-medium text-gray-500">
-                    <span class="animate-spin inline-block w-5 h-5 border-2 border-pink-400 border-t-pink-800 rounded-full mr-2"></span>
-                    Connecting to the oven (database)...
-                </div>
-                <!-- Orders will be dynamically inserted here -->
-            </div>
-            <p class="text-center text-sm text-gray-500 mt-8">
-                Orders are displayed here in real-time as they are placed! (This is a public list for demonstration.)
-            </p>
-            <p class="text-center text-xs text-gray-400 mt-2">
-                Your Admin ID: <span id="user-id-display" class="font-mono text-pink-500">Loading...</span>
-            </p>
-        </section>
-    </main>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
+                <form id="contact-form">
+                    <div class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 transition duration-150">
+                        </div>
+                         <div>
+                            <label for="quantity" class="block text-sm font-medium text-gray-700">Total Tubs Needed</label>
+                            <input type="number" id="quantity" name="quantity" required min="1" placeholder="e.g., 6, 12, or 50 for catering"
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Specific Flavors & Delivery Address (Required for Singapore Delivery)</label>
+                            <textarea id="message" name="message" rows="4" required
+                                      class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500 transition duration-150" placeholder="Example: 4 Oreo, 4 Biscoff, 2 Strawberry, 2 Blueberry. Full Singapore delivery address..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-button"
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-md text-lg font-bold text-white bg-fuchsia-500 hover:bg-fuchsia-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500 transition duration-300 transform hover:scale-[1.01]">
+                            Send Sweet Inquiry
+                        </button>
+                        <div id="status-message" class="text-center mt-4 text-sm font-medium hidden"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <!-- 6. Order Tracking Section - Where you check orders -->
+        <section id="orders" class="py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Recent Orders (Your Dashboard)</h2>
+            <div id="order-list" class="space-y-4 max-w-4xl mx-auto">
+                <div id="loading-message" class="text-center text-lg font-medium text-gray-500">
+                    <span class="animate-spin inline-block w-5 h-5 border-2 border-pink-400 border-t-pink-800 rounded-full mr-2"></span>
+                    Connecting to the oven (database)...
+                </div>
+                <!-- Orders will be dynamically inserted here -->
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-8">
+                Orders are displayed here in real-time as they are placed! (This is a public list for demonstration.)
+            </p>
+            <p class="text-center text-xs text-gray-400 mt-2">
+                Your Admin ID: <span id="user-id-display" class="font-mono text-pink-500">Loading...</span>
+            </p>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-12">
-        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <p class="text-xl text-gray-600">Find us on Instagram: **@TinyTubsOfficial**</p>
-            </div>
-            <p class="text-sm text-gray-500">&copy; <span id="current-year"></span> Tiny Tubs Official. All rights reserved.</p>
-            <p class="text-xs text-gray-400 mt-1">Life is short, eat dessert first. 🍰</p>
-        </div>
-    </footer>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <p class="text-xl text-gray-600">Find us on Instagram: **@TinyTubsOfficial**</p>
+            </div>
+            <p class="text-sm text-gray-500">&copy; <span id="current-year"></span> Tiny Tubs Official. All rights reserved.</p>
+            <p class="text-xs text-gray-400 mt-1">Life is short, eat dessert first. 🍰</p>
+        </div>
+    </footer>
 
-    <!-- Firebase SDKs -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, onSnapshot, query, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        /*
-            ==================================================================================
-            SERVER-SIDE ACTION REQUIRED: Email Notification Architecture (tinytubsofficial@gmail.com)
-            ==================================================================================
+        /*
+            ==================================================================================
+            SERVER-SIDE ACTION REQUIRED: Email Notification Architecture (tinytubsofficial@gmail.com)
+            ==================================================================================
 
-            The current client-side JavaScript (running in the browser) successfully saves orders
-            to Firestore. However, sending a notification email from a specific address (like
-            tinytubsofficial@gmail.com) requires a SECURE, server-side process.
+            The current client-side JavaScript (running in the browser) successfully saves orders
+            to Firestore. However, sending a notification email from a specific address (like
+            tinytubsofficial@gmail.com) requires a SECURE, server-side process.
 
-            This *cannot* be done safely from this HTML file, as it would expose your email
-            credentials.
+            This *cannot* be done safely from this HTML file, as it would expose your email
+            credentials.
 
-            To achieve email notifications, you need to set up a Firebase Cloud Function.
-            
+            To achieve email notifications, you need to set up a Firebase Cloud Function.
+            
 
-            1.  Deployment: Deploy this JavaScript code as a Node.js Cloud Function.
-            2.  Trigger: The function must be triggered by a 'onCreate' event on the 'orders' collection.
-            3.  Email Service: The function uses a service (like Nodemailer or a dedicated email API)
-                to send the email.
+            1.  Deployment: Deploy this JavaScript code as a Node.js Cloud Function.
+            2.  Trigger: The function must be triggered by a 'onCreate' event on the 'orders' collection.
+            3.  Email Service: The function uses a service (like Nodemailer or a dedicated email API)
+                to send the email.
 
-            ----------------------------------------------------------------------------------
-            MOCK CLOUD FUNCTION CODE (for documentation purposes - this runs on a server, NOT here)
-            // Example using Firebase Functions and Nodemailer (requires setup and configuration)
+            ----------------------------------------------------------------------------------
+            MOCK CLOUD FUNCTION CODE (for documentation purposes - this runs on a server, NOT here)
+            ----------------------------------------------------------------------------------
+            // Example using Firebase Functions and Nodemailer (requires setup and configuration)
 
-            // const functions = require('firebase-functions');
-            // const nodemailer = require('nodemailer');
+            // const functions = require('firebase-functions');
+            // const nodemailer = require('nodemailer');
 
-            // // Configure the email transporter using your Gmail credentials securely stored as secrets
-            // const mailTransport = nodemailer.createTransport({
-            //     service: 'gmail',
-            //     auth: {
-            //         user: 'tinytubsofficial@gmail.com',
-            //         pass: 'YOUR_APP_PASSWORD_OR_SECRET', // Use App Password, NOT main password
-            //     },
-            // });
+            // // Configure the email transporter using your Gmail credentials securely stored as secrets
+            // const mailTransport = nodemailer.createTransport({
+            //     service: 'gmail',
+            //     auth: {
+            //         user: 'tinytubsofficial@gmail.com',
+            //         pass: 'YOUR_APP_PASSWORD_OR_SECRET', // Use App Password, NOT main password
+            //     },
+            // });
 
-            // exports.sendOrderNotification = functions.firestore
-            //     .document('artifacts/{appId}/public/data/orders/{orderId}')
-            //     .onCreate((snap, context) => {
-            //         const order = snap.data();
-            //         const orderId = context.params.orderId;
+            // exports.sendOrderNotification = functions.firestore
+            //     .document('artifacts/{appId}/public/data/orders/{orderId}')
+            //     .onCreate((snap, context) => {
+            //         const order = snap.data();
+            //         const orderId = context.params.orderId;
 
-            //         const mailOptions = {
-            //             from: 'Tiny Tubs System <tinytubsofficial@gmail.com>',
-            //             to: 'tinytubsofficial@gmail.com', // Notification destination
-            //             subject: `[NEW ORDER] ${order.name} - ${order.quantity} Tubs`,
-            //             html: `
-            //                 <h1>New Order Received!</h1>
-            //                 <p><strong>Order ID:</strong> ${orderId}</p>
-            //                 <p><strong>Client:</strong> ${order.name} (${order.email})</p>
-            //                 <p><strong>Quantity:</strong> ${order.quantity} Tubs</p>
-            //                 <p><strong>Details/Address:</strong> ${order.details}</p>
-            //                 <p><strong>Time:</strong> ${new Date(order.timestamp.seconds * 1000).toLocaleString()}</p>
-            //                 <p>Check the live dashboard in your app for more details.</p>
-            //             `,
-            //         };
+            //         const mailOptions = {
+            //             from: 'Tiny Tubs System <tinytubsofficial@gmail.com>',
+            //             to: 'tinytubsofficial@gmail.com', // Notification destination
+            //             subject: `[NEW ORDER] ${order.name} - ${order.quantity} Tubs`,
+            //             html: `
+            //                 <h1>New Order Received!</h1>
+            //                 <p><strong>Order ID:</strong> ${orderId}</p>
+            //                 <p><strong>Client:</strong> ${order.name} (${order.email})</p>
+            //                 <p><strong>Quantity:</strong> ${order.quantity} Tubs</p>
+            //                 <p><strong>Details/Address:</strong> ${order.details}</p>
+            //                 <p><strong>Time:</strong> ${new Date(order.timestamp.seconds * 1000).toLocaleString()}</p>
+            //                 <p>Check the live dashboard in your app for more details.</p>
+            //             `,
+            //         };
 
-            //         // IMPORTANT: You must handle the promise return for the function to complete successfully
-            //         return mailTransport.sendMail(mailOptions).then(() => {
-            //             console.log('New order notification email successfully sent to Admin.');
-            //             return null;
-            //         }).catch((error) => {
-            //             console.error('Error sending order notification email:', error);
-            //             return null;
-            //         });
-            //     });
+            //         // IMPORTANT: You must handle the promise return for the function to complete successfully
+            //         return mailTransport.sendMail(mailOptions).then(() => {
+            //             console.log('New order notification email successfully sent to Admin.');
+            //             return null;
+            //         }).catch((error) => {
+            //             console.error('Error sending order notification email:', error);
+            //             return null;
+            //         });
+            //     });
 
-            // The order submission process (handleFormSubmit) in this file remains the same,
-            // as it only needs to write the data to Firestore. The Cloud Function handles the rest.
-            ==================================================================================
-        */
-        
-        // Set the current year in the footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+            // The order submission process (handleFormSubmit) in this file remains the same,
+            // as it only needs to write the data to Firestore. The Cloud Function handles the rest.
+            ==================================================================================
+        */
+        
+        // Set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
-        // 1. Firebase Setup & Initialization
-        // Use provided global variables
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
-        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        // 1. Firebase Setup & Initialization
+        // Use provided global variables
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
-        if (Object.keys(firebaseConfig).length === 0) {
-            console.error("Firebase configuration is missing. Data saving will not work.");
-            document.getElementById('loading-message').textContent = "Database connection failed. Configuration missing.";
-        }
-        
-        // Log level for debugging
-        setLogLevel('error'); // Only show errors
+        if (Object.keys(firebaseConfig).length === 0) {
+            console.error("Firebase configuration is missing. Data saving will not work.");
+            document.getElementById('loading-message').textContent = "Database connection failed. Configuration missing.";
+        }
+        
+        // Log level for debugging
+        setLogLevel('error'); // Only show errors
 
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        const auth = getAuth(app);
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
 
-        let userId = null;
-        let isAuthReady = false;
-        
-        // --- Authentication ---
-        async function authenticateUser() {
-            try {
-                let userCredential;
-                if (initialAuthToken) {
-                    userCredential = await signInWithCustomToken(auth, initialAuthToken);
-                } else {
-                    userCredential = await signInAnonymously(auth);
-                }
-                userId = userCredential.user.uid;
-                document.getElementById('user-id-display').textContent = userId;
-                isAuthReady = true;
-                console.log("Firebase Auth successful. User ID:", userId);
-                startOrderListener();
-            } catch (error) {
-                console.error("Firebase Authentication failed:", error);
-                document.getElementById('loading-message').textContent = "Authentication failed. Cannot load orders.";
-            }
-        }
-        
-        authenticateUser();
+        let userId = null;
+        let isAuthReady = false;
+        
+        // --- Authentication ---
+        async function authenticateUser() {
+            try {
+                let userCredential;
+                if (initialAuthToken) {
+                    userCredential = await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    userCredential = await signInAnonymously(auth);
+                }
+                userId = userCredential.user.uid;
+                document.getElementById('user-id-display').textContent = userId;
+                isAuthReady = true;
+                console.log("Firebase Auth successful. User ID:", userId);
+                startOrderListener();
+            } catch (error) {
+                console.error("Firebase Authentication failed:", error);
+                document.getElementById('loading-message').textContent = "Authentication failed. Cannot load orders.";
+            }
+        }
+        
+        authenticateUser();
 
-        // 2. Order Submission Function
-        document.getElementById('contact-form').addEventListener('submit', handleFormSubmit);
+        // 2. Order Submission Function
+        document.getElementById('contact-form').addEventListener('submit', handleFormSubmit);
 
-        async function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            const statusMessage = document.getElementById('status-message');
-            const submitButton = document.getElementById('submit-button');
-            const form = event.target;
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            if (!isAuthReady) {
+                document.getElementById('status-message').textContent = "Please wait, connecting to the server...";
+                document.getElementById('status-message').classList.remove('hidden');
+                return;
+            }
 
-            if (!isAuthReady) {
-                statusMessage.textContent = "Please wait, connecting to the server...";
-                statusMessage.className = 'text-center mt-4 text-sm font-medium text-yellow-600';
-                statusMessage.classList.remove('hidden');
-                return;
-            }
+            const statusMessage = document.getElementById('status-message');
+            const submitButton = document.getElementById('submit-button');
+            const form = event.target;
+            
+            const originalButtonText = submitButton.textContent;
+            const orderData = {
+                name: form.elements['name'].value,
+                email: form.elements['email'].value,
+                quantity: parseInt(form.elements['quantity'].value, 10),
+                details: form.elements['message'].value,
+                timestamp: serverTimestamp(),
+                // Use the user's ID as the submitter/client ID
+                submitterId: userId, 
+            };
 
-            const originalButtonText = submitButton.textContent;
-            const orderData = {
-                name: form.elements['name'].value,
-                email: form.elements['email'].value,
-                quantity: parseInt(form.elements['quantity'].value, 10),
-                details: form.elements['message'].value,
-                timestamp: serverTimestamp(),
-                // Use the user's ID as the submitter/client ID
-                submitterId: userId, 
-            };
+            submitButton.textContent = 'Baking Request...';
+            submitButton.disabled = true;
+            submitButton.classList.add('bg-gray-400', 'hover:bg-gray-400');
+            submitButton.classList.remove('bg-fuchsia-500', 'hover:bg-fuchsia-600');
+            
+            statusMessage.classList.remove('text-green-600', 'text-red-600', 'hidden');
+            statusMessage.classList.add('text-gray-600', 'block');
+            statusMessage.textContent = 'Submitting your sweet inquiry to the cloud oven...';
 
-            // UI feedback: Disable button and show loading
-            submitButton.disabled = true;
-            submitButton.innerHTML = `<span class="animate-spin inline-block w-4 h-4 border-2 border-white border-t-fuchsia-200 rounded-full mr-2"></span> Sending...`;
-            statusMessage.classList.remove('hidden');
-            statusMessage.className = 'text-center mt-4 text-sm font-medium text-fuchsia-600';
-            statusMessage.textContent = 'Preparing the order for the oven...';
+            try {
+                // Public Collection Path for shared app data: /artifacts/{appId}/public/data/orders
+                const ordersCollectionRef = collection(db, 'artifacts', appId, 'public', 'data', 'orders');
+                await addDoc(ordersCollectionRef, orderData);
 
-            try {
-                // Collection path for public data: /artifacts/{appId}/public/data/{collectionName}
-                const ordersCollectionPath = `artifacts/${appId}/public/data/orders`;
-                await addDoc(collection(db, ordersCollectionPath), orderData);
-                
-                // Success feedback
-                statusMessage.textContent = 'Order Placed! Thank you. We will be in touch via email soon.';
-                statusMessage.className = 'text-center mt-4 text-sm font-medium text-green-600';
-                form.reset(); // Clear the form
-            } catch (e) {
-                console.error("Error adding document: ", e);
-                statusMessage.textContent = 'Error placing order. Please check the console for details.';
-                statusMessage.className = 'text-center mt-4 text-sm font-medium text-red-600';
-            } finally {
-                // Reset button state
-                submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
-            }
-        }
+                // Success State
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+                submitButton.classList.remove('bg-gray-400', 'hover:bg-gray-400');
+                submitButton.classList.add('bg-fuchsia-500', 'hover:bg-fuchsia-600');
+                
+                statusMessage.classList.remove('text-gray-600');
+                statusMessage.classList.add('text-green-600');
+                // The Cloud Function will now see this new entry and send the email!
+                statusMessage.textContent = `Wonderful, ${orderData.name}! Your inquiry is officially in the oven (Database)! A notification has been triggered to tinytubsofficial@gmail.com. We will contact you shortly to confirm your order details and delivery fee.`;
+                
+                // Clear the form after successful submission
+                form.reset();
+            } catch (error) {
+                console.error("Error saving order to Firestore:", error);
+                
+                // Error State
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+                submitButton.classList.remove('bg-gray-400', 'hover:bg-gray-400');
+                submitButton.classList.add('bg-fuchsia-500', 'hover:bg-fuchsia-600');
+                
+                statusMessage.classList.remove('text-gray-600');
+                statusMessage.classList.add('text-red-600');
+                statusMessage.textContent = `Error placing order: ${error.message}. Please try again.`;
+            }
+        }
 
-        // 3. Real-time Order Listener Function
-        function startOrderListener() {
-            if (!isAuthReady) return;
+        // 3. Real-time Order Monitoring Function (The "How to Check" part)
+        function startOrderListener() {
+            const orderListContainer = document.getElementById('order-list');
+            const loadingMessage = document.getElementById('loading-message');
 
-            const orderList = document.getElementById('order-list');
-            const loadingMessage = document.getElementById('loading-message');
-            const ordersCollectionPath = `artifacts/${appId}/public/data/orders`;
-            
-            // Note: Cannot use orderBy('timestamp') without creating an index.
-            // Fetching data without ordering and sorting client-side is simpler for small public lists.
-            const q = query(collection(db, ordersCollectionPath));
+            if (!isAuthReady) return;
 
-            onSnapshot(q, (querySnapshot) => {
-                loadingMessage.classList.add('hidden');
-                const orders = [];
-                querySnapshot.forEach((doc) => {
-                    // Merge ID with data for easier rendering
-                    const data = doc.data();
-                    orders.push({ id: doc.id, ...data });
-                });
-                
-                // Sort the orders by timestamp descending (newest first) client-side
-                // Handle cases where timestamp might be pending (null)
-                orders.sort((a, b) => {
-                    const timeA = a.timestamp?.toMillis() || 0;
-                    const timeB = b.timestamp?.toMillis() || 0;
-                    return timeB - timeA;
-                });
+            // Define the query: get orders from the public collection
+            const ordersCollectionRef = collection(db, 'artifacts', appId, 'public', 'data', 'orders');
+            // NOTE: OrderBy is commented out to comply with mandatory instructions, 
+            // so we sort locally by timestamp later.
+            const q = query(ordersCollectionRef); // orderBy('timestamp', 'desc'));
 
-                renderOrders(orders);
-            }, (error) => {
-                console.error("Error listening to orders: ", error);
-                loadingMessage.textContent = "Error loading orders. See console for database error.";
-                loadingMessage.classList.remove('hidden', 'text-gray-500');
-                loadingMessage.classList.add('text-red-600');
-            });
-        }
+            // Set up real-time listener
+            onSnapshot(q, (snapshot) => {
+                loadingMessage.classList.add('hidden'); // Hide loading message once data comes in
+                
+                if (snapshot.empty) {
+                    orderListContainer.innerHTML = '<p class="text-center text-gray-500 p-8 bg-white rounded-xl shadow-inner">No orders placed yet. Be the first!</p>';
+                    return;
+                }
 
-        // 4. Order Rendering Logic
-        function renderOrders(orders) {
-            const orderList = document.getElementById('order-list');
-            orderList.innerHTML = ''; // Clear existing orders
+                let orders = [];
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    orders.push({ id: doc.id, ...data });
+                });
+                
+                // Sort by timestamp locally (since orderBy is avoided in the query)
+                orders.sort((a, b) => {
+                    const timeA = a.timestamp?.seconds || 0;
+                    const timeB = b.timestamp?.seconds || 0;
+                    return timeB - timeA; // Descending order (newest first)
+                });
+                
+                // Render the orders
+                orderListContainer.innerHTML = orders.map(order => {
+                    const date = order.timestamp ? new Date(order.timestamp.seconds * 1000).toLocaleString() : 'Processing...';
+                    
+                    return `
+                        <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-pink-500 transition duration-150 hover:shadow-lg">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-xl font-bold text-gray-900">${order.name}</h4>
+                                <span class="text-sm font-semibold text-pink-600 bg-pink-100 px-3 py-1 rounded-full">${order.quantity} Tubs</span>
+                            </div>
+                            <p class="text-gray-700 font-medium mb-1">Email: <span class="font-normal text-sm">${order.email}</span></p>
+                            <p class="text-gray-700 font-medium mb-3">Details: <span class="font-normal">${order.details}</span></p>
+                            <div class="text-xs text-gray-500 border-t pt-2 mt-2">
+                                Placed: ${date} | Order ID: ${order.id}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }, (error) => {
+                console.error("Error listening to orders:", error);
+                orderListContainer.innerHTML = `<p class="text-center text-red-600 p-8 bg-white rounded-xl shadow-inner">Error loading orders: ${error.message}</p>`;
+            });
+        }
+        
+        // --- Mobile Menu Toggle Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-            if (orders.length === 0) {
-                orderList.innerHTML = `<div class="p-6 bg-pink-100 rounded-xl shadow-md text-center text-lg text-pink-700 font-semibold">
-                    No orders baked yet! Be the first to try.
-                </div>`;
-                return;
-            }
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-            orders.forEach(order => {
-                const timestamp = order.timestamp ? new Date(order.timestamp.toDate()).toLocaleString() : 'Pending...';
-                
-                const orderItem = document.createElement('div');
-                orderItem.className = 'p-6 bg-white rounded-xl shadow-lg border-l-4 border-pink-500 hover:shadow-xl transition duration-200';
-                orderItem.innerHTML = `
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold text-gray-800">${order.name} (${order.quantity} Tubs)</h3>
-                        <span class="text-sm font-semibold text-pink-600 bg-pink-50 px-3 py-1 rounded-full">${timestamp.split(',')[0]}</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-3">Email: ${order.email}</p>
-                    <div class="p-3 bg-gray-50 rounded-lg border border-gray-200 text-sm">
-                        <p class="font-medium text-gray-700">Details:</p>
-                        <p class="whitespace-pre-wrap text-gray-600">${order.details}</p>
-                    </div>
-                    <p class="text-xs text-gray-400 mt-2">Order ID: ${order.id}</p>
-                `;
-                orderList.appendChild(orderItem);
-            });
-        }
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
-        // 5. Mobile Menu Toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', () => {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+    </script>
 </body>
 </html>
-
